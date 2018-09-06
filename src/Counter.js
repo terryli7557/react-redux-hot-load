@@ -15,7 +15,7 @@ export class Counter extends Component {
     return (
       <div className="counter">
         {this.props.count} test this is cool!
-        <div>
+        <div className="button-container">
           <button onClick={this.decrement}>-</button>
           <button onClick={this.increment}>+</button>
         </div>

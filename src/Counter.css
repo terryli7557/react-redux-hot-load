@@ -1,4 +1,8 @@
 .counter {
   margin: 10px;
   background: #eee;
+  text-align: center;
+}
+.button-container{
+  padding:10px;
 }

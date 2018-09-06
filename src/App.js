@@ -3,10 +3,14 @@ import {connect} from 'react-redux';
 import './App.css';
 import {Counter} from "./Counter";
 
-class App {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <Counter/>
+      <Counter count={this.props.count} increment={this.props.increment} decrement={this.props.decrement}/>
     );
   }
 }
@@ -28,4 +32,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToPros, mapDispatchToProps)(Counter);
+export default connect(mapStateToPros, mapDispatchToProps)(App);
