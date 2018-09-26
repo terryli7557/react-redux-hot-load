@@ -1,6 +1,6 @@
-import {Component} from "react";
+import { Component } from "react";
 import React from "react";
-import './Counter.css';
+import "./Counter.css";
 
 export class Counter extends Component {
   increment = () => {

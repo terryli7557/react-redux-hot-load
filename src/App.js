@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import './App.css';
-import {Counter} from "./Counter";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import "./App.css";
+import { Counter } from "./Counter";
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +10,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <Counter count={this.props.count} increment={this.props.increment} decrement={this.props.decrement}/>
+      <Counter
+        count={this.props.count}
+        increment={this.props.increment}
+        decrement={this.props.decrement}
+      />
     );
   }
 }
@@ -24,10 +28,10 @@ function mapStateToPros(state) {
 function mapDispatchToProps(dispatch) {
   return {
     increment: () => {
-      dispatch({type: 'INCREMENT'});
+      dispatch({ type: "INCREMENT" });
     },
     decrement: () => {
-      dispatch({type: 'DECREMENT'});
+      dispatch({ type: "DECREMENT" });
     }
   };
 }

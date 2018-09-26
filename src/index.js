@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App, {Counter} from './App';
-import {AppContainer} from 'react-hot-loader';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App, { Counter } from "./App";
+import { AppContainer } from "react-hot-loader";
 
-
-import registerServiceWorker from './registerServiceWorker';
-import {Provider} from "react-redux";
-import {createStore} from 'redux';
+import registerServiceWorker from "./registerServiceWorker";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 
 const initialState = {
   count: 42
@@ -15,11 +14,11 @@ const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case'INCREMENT':
+    case "INCREMENT":
       return {
         count: state.count + 1
       };
-    case 'DECREMENT':
+    case "DECREMENT":
       return {
         count: state.count - 1
       };
@@ -28,7 +27,8 @@ function reducer(state = initialState, action) {
   }
 }
 
-const store = createStore(reducer,
+const store = createStore(
+  reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
@@ -36,17 +36,18 @@ const render = () => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <App/>
+        <App />
       </Provider>
-    </AppContainer>
-    , document.getElementById('root'));
+    </AppContainer>,
+    document.getElementById("root")
+  );
 };
 registerServiceWorker();
 
 render();
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
+  module.hot.accept("./App", () => {
     render();
   });
 }
