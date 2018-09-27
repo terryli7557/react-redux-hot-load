@@ -13,7 +13,7 @@
     "redux": "^4.0.0"
   },
   "scripts": {
-    "format": "prettier-standard 'src/**/*.js'",
+    "format": "prettier 'src/**/*.js' --write",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
@@ -31,7 +31,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
-    "prettier": "^1.14.3",
-    "prettier-standard": "^8.0.1"
+    "prettier": "^1.14.3"
   }
 }
