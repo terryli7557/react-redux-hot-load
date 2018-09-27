@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import { Counter } from "./Counter";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+    console.log("mounted");
   }
 
   render() {
@@ -36,4 +36,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToPros, mapDispatchToProps)(App);
+export default connect(
+  mapStateToPros,
+  mapDispatchToProps
+)(App);
