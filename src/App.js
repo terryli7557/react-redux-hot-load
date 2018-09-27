@@ -1,11 +1,11 @@
-import React from "react";
-import { connect } from "react-redux";
-import "./App.css";
-import { Counter } from "./Counter";
+import React from 'react';
+import { connect } from 'react-redux';
+import './App.css';
+import { Counter } from './Counter';
 
 class App extends React.Component {
   componentDidMount() {
-    console.log("mounted");
+    console.log('mounted');
   }
 
   render() {
@@ -28,10 +28,10 @@ function mapStateToPros(state) {
 function mapDispatchToProps(dispatch) {
   return {
     increment: () => {
-      dispatch({ type: "INCREMENT" });
+      dispatch({ type: 'INCREMENT' });
     },
     decrement: () => {
-      dispatch({ type: "DECREMENT" });
+      dispatch({ type: 'DECREMENT' });
     }
   };
 }
